@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HomeController extends AbstractController
 {
-    #[Route('/nursebyname?user={user}&pass={pass}', name: 'app_nurse', methods: ['GET'])]
+    #[Route('/nursebyname/{user}-{pass}', name: 'app_nurse', methods: ['GET'])]
     public function nursebyname(string $user, string $pass): JsonResponse
     {
         
